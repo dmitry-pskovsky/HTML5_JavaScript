@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES2015 Module Example</title>
+</head>
+<body>
+<script src="thirdparty/system.js"></script>
+<script src="lib/pixi.js"></script>
+<script>
+    System.config({ "baseURL": "es5" });
+    System.import("BaseContainer.js");
+    System.import("Square.js");
+    System.import("graphic/elements/BackgroundGrid.js");
+    System.import("common/Point.js");
+    System.import("index.js");
+</script>
+</body>
+</html>

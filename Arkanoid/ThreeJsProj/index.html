@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+		<style>
+
+		</style>
+    <script src="../external/three.js"></script>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+
+            canvas.setAttribute("width", 800);
+            canvas.setAttribute("height", 500);
+
+            var renderer = new THREE.CanvasRenderer();//new THREE.WebGLRenderer({canvas: canvas});
+            renderer.setClearColor(0x000000);
+
+            var scene = new THREE.Scene();
+
+            var camera = new THREE.PerspectiveCamera(45, 800 / 500, 0.1, 5);
+            camera.position.set(100, 0, 1000);
+
+            var light = new THREE.AmbientLight(0xffffff);
+            scene.add(light);
+
+            var geometry = new THREE.SphereGeometry(100, 12, 12);
+            var material = new THREE.MeshBasicMaterial({color:0x00ff00, wireframe: false});
+            var mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            renderer.render(scene, camera);
+        }
+
+    </script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+</html>

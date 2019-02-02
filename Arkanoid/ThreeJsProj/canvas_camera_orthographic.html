@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js canvas - camera - orthographic</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #f0f0f0;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+
+		<script src="../external/three.js"></script>
+
+		<script src="renderers/Projector.js"></script>
+		<script src="renderers/CanvasRenderer.js"></script>
+		<script src="../Game/js/model/GameConstants.js"></script>
+		<script src="js/GraphicObject3D.js"></script>
+		<script src="GraphicContext3D.js"></script>
+
+		<script>
+
+			var graphicContext = new GraphicContext3D();
+			graphicContext.drawBall();
+			graphicContext.drawMothership(4, 1);
+		</script>
+
+	</body>
+</html>
